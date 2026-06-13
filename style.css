@@ -1,0 +1,241 @@
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:linear-gradient(180deg, #0f172a, #0b1220);
+color:white;
+}
+
+/* ================= HEADER ================= */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 25px;
+background:#111827;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo{
+height:65px;
+width:auto;
+max-width:240px;
+object-fit:contain;
+}
+
+/* ================= NAV ================= */
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:6px 4px;
+border-bottom:2px solid transparent;
+}
+
+nav a:hover,
+nav a.active{
+color:#1e90ff;
+border-bottom:2px solid #1e90ff;
+}
+
+/* ================= HERO (STARTBILD) ================= */
+.hero{
+height:100vh;
+width:100%;
+background:url('bilder/flugplatz.jpg') center/cover no-repeat;
+position:relative;
+
+display:flex;
+align-items:flex-start;
+justify-content:center;
+
+padding-top:120px;
+box-sizing:border-box;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.45);
+}
+
+.hero-content{
+position:relative;
+text-align:center;
+background:rgba(17,24,39,0.55);
+padding:20px;
+border-radius:12px;
+backdrop-filter:blur(6px);
+}
+
+.hero-btn{
+display:inline-block;
+margin-top:15px;
+background:#1e90ff;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+transition:0.2s;
+}
+
+.hero-btn:hover{
+background:#1877d6;
+transform:scale(1.05);
+}
+
+/* ================= CONTAINER ================= */
+.container{
+max-width:1000px;
+margin:30px auto;
+padding:20px;
+}
+
+/* ================= CARDS ================= */
+.card{
+background:#111827;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+border-left:4px solid #1e90ff;
+box-shadow:0 4px 15px rgba(0,0,0,0.25);
+}
+
+/* ================= INFO BOX ================= */
+.info-box{
+background:#0b1220;
+padding:15px;
+border-radius:10px;
+margin:15px 0;
+}
+
+/* ================= BUTTONS ================= */
+button,
+.hero-btn,
+.card-nav a{
+background:#1e90ff;
+color:white;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+cursor:pointer;
+text-decoration:none;
+display:inline-block;
+font-weight:bold;
+transition:0.2s;
+}
+
+button:hover,
+.hero-btn:hover,
+.card-nav a:hover{
+background:#1877d6;
+transform:scale(1.05);
+}
+
+/* ================= CARD NAV ================= */
+.card-nav{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.card-nav a{
+padding:10px 14px;
+border-radius:8px;
+}
+
+/* ================= FORM FIX ================= */
+input,
+textarea,
+select{
+width:100%;
+padding:12px;
+margin-top:10px;
+
+background:#0b1220;
+color:white;
+
+border:1px solid #1f2937;
+border-radius:8px;
+
+outline:none;
+box-sizing:border-box;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+border:1px solid #1e90ff;
+box-shadow:0 0 0 2px rgba(30,144,255,0.25);
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+input::placeholder,
+textarea::placeholder{
+color:#9ca3af;
+}
+
+/* ================= GALERIE ================= */
+details{
+background:#0b1220;
+padding:12px;
+border-radius:10px;
+margin-top:10px;
+}
+
+summary{
+cursor:pointer;
+font-weight:bold;
+color:#1e90ff;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(5, 1fr);
+gap:10px;
+margin-top:10px;
+}
+
+.gallery-grid img{
+width:100%;
+height:120px;
+object-fit:cover;
+border-radius:8px;
+transition:0.2s;
+}
+
+.gallery-grid img:hover{
+transform:scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+footer{
+text-align:center;
+padding:25px;
+color:#aaa;
+}
+
+footer a{
+color:#aaa;
+text-decoration:none;
+margin:0 5px;
+}
+
+footer a:hover{
+color:#1e90ff;
+}
