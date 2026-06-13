@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<title>Anfahrt</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<img src="bilder/logo.png" class="logo">
+
+<nav>
+<a href="index.html">Start</a>
+<a href="verein.html">Verein</a>
+<a href="flugplatz.html">Flugplatz</a>
+<a href="galerie.html">Galerie</a>
+<a href="gastpiloten.html">Gastpiloten</a>
+<a href="anfahrt.html" class="active">Anfahrt</a>
+<a href="kontakt.html">Kontakt</a>
+</nav>
+
+</header>
+
+
+<div class="container">
+
+<div class="card">
+
+<h2>Anfahrt</h2>
+
+<div class="info-box">
+
+<p>
+<b>Wichtiger Hinweis</b><br><br>
+
+Die Zufahrt zum Flugplatz ist ausschließlich über den
+<b>Rethstellredder</b> erlaubt.<br>
+Eine Anfahrt über den <b>Seehof</b> ist nicht gestattet.
+</p>
+
+<input id="start" placeholder="Startadresse eingeben">
+
+<button onclick="route()">
+Route planen
+</button>
+
+</div>
+
+
+<!-- GOOGLE MAPS BOX -->
+<div class="info-box">
+
+<p><b>Standort Flugplatz</b></p>
+
+<iframe
+src="https://www.google.com/maps?q=54.2172239,10.2441977&output=embed">
+</iframe>
+
+</div>
+
+</div>
+
+</div>
+
+
+<script>
+
+function route(){
+
+let start =
+document.getElementById("start").value;
+
+if(!start){
+alert("Bitte Startadresse eingeben");
+return;
+}
+
+window.open(
+"https://www.google.com/maps/dir/?api=1&origin="
++ encodeURIComponent(start)
++ "&destination=54.2172239,10.2441977"
+);
+
+}
+
+</script>
+
+
+<footer>
+© 2026 Modellfluggruppe Preetz e.V. |
+<a href="datenschutz.html">Datenschutz</a> |
+<a href="impressum.html">Impressum</a>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>
